@@ -14,6 +14,8 @@ int main()
     int playerScore = 0;
     int playerLives = 3;
 
+    float multiplier = 1.0;
+
     Bat bat(WIDTH / 2, HEIGHT - 20);
     Ball ball(WIDTH / 2, 0);
 
@@ -87,18 +89,23 @@ int main()
             {
                 playerScore = 0;
                 playerLives = 3;
+                multiplier = 1.f;
+                ball.resetSpeed();
             }
         }
 
         if (ball.getPosition().top < 0)
         {
+            multiplier += 0.1;
             ball.boundsBatOrTop();
+            ball.SetSpeedMultiplied(multiplier);
             playerScore++;
         }
         //bounce ball when hitting sides
-        if ((ball.getPosition().left < 0) || (ball.getPosition().left +10 > window.getSize().x))
+        if ((ball.getPosition().left < 0) || (ball.getPosition().left +10 > WIDTH))
         {
             ball.boundsSides();
+            
         }
         if (ball.getPosition().intersects(bat.getPosition()))
         {

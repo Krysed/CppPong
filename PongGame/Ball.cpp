@@ -11,13 +11,20 @@ Ball::Ball(float startX, float startY)
 }
 sf::FloatRect Ball::getPosition()
 {
-	return shape.getLocalBounds();
+	return shape.getGlobalBounds();
 }
 sf::RectangleShape Ball::getShape()
 {
 	return shape;
 }
-
+void Ball::SetSpeedMultiplied(float multiplier)
+{
+	speed *= 1.1;
+}
+void Ball::resetSpeed()
+{
+	speed = baseSpeed;
+}
 float Ball::getXVelocity()
 {
 	return directionX;

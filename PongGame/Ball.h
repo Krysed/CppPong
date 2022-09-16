@@ -7,7 +7,8 @@ private:
 	sf::Vector2f position;
 	sf::RectangleShape shape;
 	
-	float speed = 1500.f;
+	const float baseSpeed = 1500.f;
+	float speed = baseSpeed;
 	float directionX = .2f;
 	float directionY = .2f;
 public:
@@ -18,6 +19,9 @@ public:
 	sf::RectangleShape getShape();
 
 	float getXVelocity();
+
+	void SetSpeedMultiplied(float multiplier);
+	void resetSpeed();
 
 	void boundsSides();
 	void boundsBatOrTop();

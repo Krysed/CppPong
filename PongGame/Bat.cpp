@@ -6,7 +6,7 @@ Bat::Bat(float startX, float startY)
 	position.x = startX;
 	position.y = startY;
 
-	shape.setSize(sf::Vector2f(50,5));
+	shape.setSize(sf::Vector2f(100,10));
 	shape.setPosition(position);
 }
 

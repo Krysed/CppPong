@@ -1,2 +1,6 @@
-﻿  PongGame.cpp
+﻿  Ball.cpp
+F:\cppGames\cppGamePong\PongGame\PongGame\Ball.cpp(22,14): warning C4305: '*=': truncation from 'double' to 'float'
+  PongGame.cpp
+F:\cppGames\cppGamePong\PongGame\PongGame\PongGame.cpp(99,30): warning C4305: '+=': truncation from 'double' to 'float'
+  Generating Code...
   PongGame.vcxproj -> F:\cppGames\cppGamePong\PongGame\x64\Debug\PongGame.exe
